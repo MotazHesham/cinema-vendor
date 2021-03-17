@@ -46,18 +46,18 @@ final categoriesMap = [
     id: 1,
     label: 'Action',
     value: MovieCategory.Action,
-    color: HexColor("#3A5A81"),
+    color: Color(0xFF3A5A81),
   ),
   Category(
     id: 2,
     label: 'Comedy',
     value: MovieCategory.Comedy,
-    color: HexColor("#D31336"),
+    color: Color(0xFFD31336),
   ),
   Category(
     id: 3,
     label: 'Thrilling',
     value: MovieCategory.Thrilling,
-    color: HexColor("#252131"),
+    color: Color(0xFF252131),
   ),
 ];

@@ -49,13 +49,13 @@ List<Widget> _buildRowSlot(
   for (var i = 0; i < 11; i++) {
     if (row == 0 && i == 4) {
       slots.add(_noneSlot('${letters[row]}${i + 1}'));
-    } else if (row == 0 && i == 5) {
+    } else if (row == 0 && i == 3) {
       slots.add(_noneSlot('${letters[row]}${i + 1}'));
-    } else if (row == 1 && i == 5) {
+    } else if (row == 1 && i == 3) {
       slots.add(_noneSlot('${letters[row]}${i + 1}'));
-    } else if (row == 2 && i == 5) {
+    } else if (row == 2 && i == 3) {
       slots.add(_noneSlot('${letters[row]}${i + 1}'));
-    } else if (row == 3 && i == 5) {
+    } else if (row == 3 && i == 3) {
       slots.add(_noneSlot('${letters[row]}${i + 1}'));
     } else if (row == 1 && i == 4) {
       slots.add(_noneSlot('${letters[row]}${i + 1}'));
@@ -101,7 +101,7 @@ class _BookingScreenState extends State<BookingScreen> {
   Widget build(BuildContext context) {
     final movieId = ModalRoute.of(context).settings.arguments as String;
     List<int> pickedSeats = [];
-    Provider.of<Bookings>(context, listen: false).fetchBookings();
+    Provider.of<Bookings>(context).fetchBookings();
     pickedSeats = Provider.of<Bookings>(context, listen: false)
         .findById(movieId)
         .seats

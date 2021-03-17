@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:intl/intl.dart';
 
+import './bookings.dart';
 import '../models/movie.dart';
 
 class Movies with ChangeNotifier {
@@ -112,6 +113,9 @@ class Movies with ChangeNotifier {
             '0': {
               'date': "$movieDate",
               'screen': {
+                'bookedSeats': {
+                  '0': 5,
+                },
                 'col': 10,
                 'id': 'sc1',
                 'row': 10,
@@ -122,6 +126,8 @@ class Movies with ChangeNotifier {
           },
         }),
       );
+
+      Bookings().fetchBookings();
     }
   }
 
